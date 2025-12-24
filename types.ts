@@ -6,12 +6,27 @@ export interface TrajectoryPoint {
   speed: number;
 }
 
+export interface ManifiestoRNDC {
+  numeroManifiesto: string;
+  fechaEmision: string;
+  origenDeclarado: string;
+  destinoDeclarado: string;
+  conductor: string;
+  empresa: string;
+}
+
 export interface VehicleTrajectory {
   placa: string;
   points: TrajectoryPoint[];
+  plannedPoints: TrajectoryPoint[]; // Ruta ideal declarada en RNDC
+  manifiesto: ManifiestoRNDC | null;
+  validation: {
+    isValid: boolean;
+    observaciones: string;
+  };
   metadata: {
-    origin: string;
-    destination: string;
+    originDetected: string;
+    destinationDetected: string;
     totalDistance: number;
     lastUpdate: string;
   };
