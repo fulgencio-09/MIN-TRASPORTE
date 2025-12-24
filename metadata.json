@@ -1,0 +1,7 @@
+{
+  "name": "SINITT - Telemetría Vehicular",
+  "description": "Sistema de Consulta y Monitoreo de trayectorias vehiculares de carga mediante conectores de telemetría, permitiendo validación de recorridos y análisis logístico.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
