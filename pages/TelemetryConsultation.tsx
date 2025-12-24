@@ -6,10 +6,6 @@ import {
   Calendar, 
   Truck, 
   AlertCircle, 
-  ChevronRight, 
-  FileText, 
-  Download,
-  Filter,
   ArrowRight,
   ArrowUp,
   Info
@@ -58,21 +54,11 @@ const TelemetryConsultation: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      {/* Page Heading */}
+      {/* Page Heading - Simplified (No export or filter buttons) */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Consulta de Trayectorias</h1>
           <p className="text-gray-500 text-sm">Validación de recorridos reales mediante conector de telemetría (Capa Gold)</p>
-        </div>
-        <div className="flex items-center space-x-2">
-          <button className="flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors shadow-sm">
-            <Download className="w-4 h-4 mr-2" />
-            Exportar reporte
-          </button>
-          <button className="flex items-center px-4 py-2 bg-blue-600 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-200">
-            <Filter className="w-4 h-4 mr-2" />
-            Filtros avanzados
-          </button>
         </div>
       </div>
 
@@ -161,28 +147,6 @@ const TelemetryConsultation: React.FC = () => {
                 </p>
               </div>
             </form>
-          </div>
-
-          {/* Business Context Side Card */}
-          <div className="mt-6 bg-slate-800 rounded-xl p-5 text-slate-100 shadow-lg">
-            <h4 className="font-bold flex items-center mb-3">
-              <FileText className="w-5 h-5 mr-2 text-blue-400" />
-              Contexto Operativo
-            </h4>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li className="flex items-start">
-                <ChevronRight className="w-4 h-4 mr-1 text-slate-500 mt-0.5" />
-                Validación contra Manifiestos (RNDC).
-              </li>
-              <li className="flex items-start">
-                <ChevronRight className="w-4 h-4 mr-1 text-slate-500 mt-0.5" />
-                Correlación de peajes electrónicos (SIGT).
-              </li>
-              <li className="flex items-start">
-                <ChevronRight className="w-4 h-4 mr-1 text-slate-500 mt-0.5" />
-                Verificación de tiempos de descanso.
-              </li>
-            </ul>
           </div>
         </div>
 
